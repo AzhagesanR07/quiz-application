@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Online Quiz Application — 10 Sets</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Online Quiz Application</h1>
+      <p class="tagline">10 sets • 10 questions each • 15 minutes per set • Instant feedback</p>
+    </header>
+
+    <main class="card">
+      <section class="top-controls">
+        <div class="sets-grid" id="setsGrid">
+          <!-- set cards inserted by JS -->
+        </div>
+
+        <div class="settings-row">
+          <label>Source
+            <select id="source">
+              <option value="local">Local question bank</option>
+              <option value="opentdb">Open Trivia DB (optional)</option>
+            </select>
+          </label>
+
+          <label>Questions per set
+            <input id="amount" type="number" min="1" max="50" value="10" />
+          </label>
+
+          <label>Set timer (minutes)
+            <input id="setMinutes" type="number" min="1" max="60" value="15" />
+          </label>
+
+          <div class="actions">
+            <button id="startSetBtn" class="btn primary">Start Selected Set</button>
+            <button id="resetBtn" class="btn ghost">Reset</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="quizArea" class="quiz-area" aria-live="polite">
+        <div class="intro">
+          <h2>Choose a set to start</h2>
+          <p class="small">Sets 1–2: HTML • Sets 3–4: CSS • Sets 5–6: JavaScript</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>By Quiz Studio — HTML • CSS • JavaScript</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
